@@ -19,15 +19,7 @@ subs.data2<-subset(new.data,as.Date(timedate,tz="")==as.Date("2007-02-02",tz="")
 subs.data<-rbind(subs.data1,subs.data2)
 
 ### PLOT
-hist(subs.data$Global_active_power,col="red",breaks=12,main="Global Active Power",xlab="Global Active Power (killowatts)")
-dev.copy(png,file="plot1.png")
+plot(subs.data$Global_active_power~subs.data$timedate,type="l",main="", ylab="Global Active Power (killowatts)", xlab="")
+dev.copy(png,file="plot2.png")
 dev.off()
-
-
-
-
-
-
-
-
 
