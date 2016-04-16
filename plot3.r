@@ -24,3 +24,10 @@ points(subs.data$Sub_metering_2~subs.data$timedate,type="l", col="red")
 points(subs.data$Sub_metering_3~subs.data$timedate,type="l", col="blue")
 legend("topright", names(subs.data[7:9]),col=c("black","red","blue"),lwd=1,lty=1)
 
+### PNG
+png(filename="plot3.png")
+plot(subs.data$Sub_metering_1~subs.data$timedate,type="l",main="", ylab="Energy sub metering", xlab="")
+points(subs.data$Sub_metering_2~subs.data$timedate,type="l", col="red")
+points(subs.data$Sub_metering_3~subs.data$timedate,type="l", col="blue")
+legend("topright", names(subs.data[7:9]),col=c("black","red","blue"),lwd=1,lty=1)
+dev.off()

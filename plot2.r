@@ -20,6 +20,9 @@ subs.data<-rbind(subs.data1,subs.data2)
 
 ### PLOT
 plot(subs.data$Global_active_power~subs.data$timedate,type="l",main="", ylab="Global Active Power (killowatts)", xlab="")
-dev.copy(png,file="plot2.png")
-dev.off()
 
+
+### PNG
+png(filename="plot2.png")
+plot(subs.data$Global_active_power~subs.data$timedate,type="l",main="", ylab="Global Active Power (killowatts)", xlab="")
+dev.off()

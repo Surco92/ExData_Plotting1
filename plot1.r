@@ -20,7 +20,10 @@ subs.data<-rbind(subs.data1,subs.data2)
 
 ### PLOT
 hist(subs.data$Global_active_power,col="red",breaks=12,main="Global Active Power",xlab="Global Active Power (killowatts)")
-dev.copy(png,file="plot1.png")
+
+### PNG
+png(filename="plot1.png")
+hist(subs.data$Global_active_power,col="red",breaks=12,main="Global Active Power",xlab="Global Active Power (killowatts)")
 dev.off()
 
 
